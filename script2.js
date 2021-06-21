@@ -1,78 +1,90 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
 var lowerCase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-
 var upperCase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-
 var numbers = ['0','1','2','3','4','5','6','7','8','9'];
-
 var specialCharacters = ['U+0020','U+0021','U+0022','u+0023','u+0024','u+0025','u+0026','u+0027','u+0028','u+0029','u+002A','u+002B','u+002C','u+002D','u+002E','u+002F','u+003A','u+003B','u+003C','u+003D','u+003E','u+003F','u+0040','u+005B','u+005C','u+005D','u+005E','u+005F','u+0060','u+007B','U=007C','U=007D','U=007E'];
-
 var password =[];
 
 
 
 // Write password to the #password input
 function writePassword() {
+var password = generatePassword();
+var passwordText = document.querySelector("#password");
 
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+passwordText.value = password;
 
 }
 
 function generatePassword() {
   var passlength = prompt("Length must be 8 to 128 characters. ");
-  var lowercase = confirm("Do you want to include lowercase letters in your pasword? ");
+  var lowerCase = confirm("Do you want to include lowercase letters in your pasword? ");
   var upperCase = confirm("Do you want to include uppercase letters in your password? ");
   var specialCharacters =confirm("Do you want to include special characters in your password? "); 
   var numbers = confirm("Do you want to include numbers in your password? ");
 
-  if (passlength < 8 || passlength >128) return
-for(var i = 0; i >=parseInt(passlength); i++) {
-  console.log("hi")
-  if (lowerCase) {
-    console.log("hi")
-    var random = lowerCase[Math.floor(Math.random()*lowerCase.length)];
-    console.log(random)
-    }
-}
+  //User prompts
+  if (passlength < 8 || passlength > 128) {
+    return "Please select a number between 8 and 128";
+  } else {
+    alert("Password length will be" + passlength + "characters.");}
+    //(var i = 0; i >=parseInt(passlength); i++);
+    
 
-if (lowerCase === true) {
+  if (lowerCase === true) {
     alert("Password will contain lowercase letters.");
   } else {alert("Password will not contain lowercase letters.");
+    //var random = lowerCase[Math.floor(Math.random()*lowerCase.length)];} 
   }
     
   if (UpperCase === true) {
     alert("Password will contain uppercase letters.");
   } else {alert("Password will not contain uppercase letters.");
+    //var random = upperCase[Math.floor(Math.random()*upperCase.length)];}
   }
   
   if (specialCharacters === true) {
   alert("Password will contain special characters.");
   } else {alert("Password will not containspecial characters");
+    //var random = specialCharacters[Math.floor(Math.random()*specialCharacters.length)];}
   }
     
   if (numbers === true) {
     alert("Password contain numbers.");
   } else {alert("password will not contain numbers.");
+    //var random = numbers[Math.floor(Math.random()*numbers.length)];
   }
-
-
-if (lowerCase) {console.log(lowercase)}
-if (upperCase) {console.log(upperCase)}
-if (specialCharacters) {console.log(specialCharacters)}
-if (numbers) {console.log(numbers)}
+  
 }
+
+
+//if (passlength < 8 || passlength >128) return
+//for(var i = 0; i >=parseInt(passlength); i++) {
+  //console.log("hi")
+  //if (lowerCase) {
+    //console.log("hi")
+    //var random = lowerCase[Math.floor(Math.random()*lowerCase.length)];
+    //console.log(random)
+
+//Need error message if not enough variables selected
+
+//need to actually sort out how to generate the password itself
+
+
+
+
+
+//if (lowerCase) {console.log(lowercase)}
+//if (upperCase) {console.log(upperCase)}
+//if (specialCharacters) {console.log(specialCharacters)}
+//if (numbers) {console.log(numbers)}
+
 
 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
 
 
 
@@ -91,6 +103,4 @@ generateBtn.addEventListener("click", writePassword);
 //THEN a password is generated that matches the selected criteria
 //WHEN the password is generated
 //THEN the password is either displayed in an alert or written to the page
-
-
 //confirms return a true or false
