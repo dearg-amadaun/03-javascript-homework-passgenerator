@@ -31,34 +31,74 @@ function generatePassword() {
   var numbers = confirm("Do you want to include numbers in your password? ");
 
   if (passlength < 8 || passlength >128) return
-for(var i = 0; i >=parseInt(passlength); i++) {
+for(var i = 0; i <=parseInt(passlength); i++) {
   console.log("hi")
   if (lowerCase) {
     console.log("hi")
     var random = lowerCase[Math.floor(Math.random()*lowerCase.length)];
     console.log(random)
     }
-}
+
+    //if (passlength < 8 || passlength > 128) {
+  //return "Please select a number between 8 and 128";
+//} else {
+  //alert("Password length will be " + passlength + "characters.");}
 
 if (lowerCase === true) {
-    alert("Password will contain lowercase letters.");
-  } else {alert("Password will not contain lowercase letters.");
-  }
+  var randomLowerCase = lowerCase[Math.floor(Math.random()*lowerCase.length)];
+  console.log(randomLowerCase)
+  password.push(randomLowerCase);
+  } 
     
-  if (UpperCase === true) {
-    alert("Password will contain uppercase letters.");
-  } else {alert("Password will not contain uppercase letters.");
+  if (upperCase === true) {
+    var randomUpperCase = upperCase[Math.floor(Math.random()*upperCase.length)];
+    console.log(randomUpperCase)
+    password.push(randomUpperCase);
+  } 
+  
+  if (specialCharacters === true) {
+    var randomSpecialCharacters = specialCharacters[Math.floor(Math.random()*specialCharacters.length)];
+    console.log(randomSpecialCharacters)
+    password.push(randomSpecialCharacters);
+    } 
+
+    
+  if (numbers === true) {
+    var randomNumbers = numbers[Math.floor(Math.random()*numbers.length)];
+    console.log(randomNumbers)
+    password.push(numbers);
   }
+  console.log(password) 
+}
+
+
+
+//
+if (lowerCase === true) {
+  alert("Password will contain lowercase letters.");
+  } else {
+    alert("Password will not contain lowercase letters.");
+}
+    
+  if (upperCase === true) {
+  alert("Password will contain uppercase letters.");
+  } else {
+    alert("Password will not contain uppercase letters.");
+}
   
   if (specialCharacters === true) {
   alert("Password will contain special characters.");
-  } else {alert("Password will not containspecial characters");
-  }
+    } else {
+      alert("Password will not containspecial characters");
+}
     
   if (numbers === true) {
     alert("Password contain numbers.");
-  } else {alert("password will not contain numbers.");
-  }
+  } else {
+    alert("password will not contain numbers.");
+}
+
+
 
 
 if (lowerCase) {console.log(lowercase)}
