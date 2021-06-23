@@ -57,14 +57,12 @@ for(var i = 0; i <=parseInt(passlength); i++) {
     console.log(randomNumbers)
     password.push(randomNumbers);
   }
-  console.log(password) 
+ 
 }
 
 password = password.slice(0, parseInt(passlength));
-console.log(password)
-
 password = password.join('');
-console.log(password)
+
 
 return password
 
