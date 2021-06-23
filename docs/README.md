@@ -3,7 +3,7 @@ This weeks assignment was to code a password generator using javascript.
 ![image](https://user-images.githubusercontent.com/83721789/122969449-a7c2a200-d35a-11eb-9d28-cb271ea92b33.png)
 https://dearg-amadaun.github.io/03-javascript-homework-passgenerator/
 
-This assignment was incredbily difficult and I'm still not entirely sure I understand most of what I've managed to do.
+This assignment was incredbily difficult and I'm still not entirely sure I understand most of what I've managed to do. The biggest issue I was not able to debug prior to submitting the assignment is that the page itself must be refreshed between each use. 
 
 ## User Story
 
