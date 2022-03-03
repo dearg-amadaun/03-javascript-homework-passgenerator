@@ -24,8 +24,7 @@
   Pull all files into a new directory on your pc. 
   
   ## Usage
-  https://dearg-amadaun.github.io/03-javascript-homework-passgenerator/
-  
+  https://dearg-amadaun.github.io/Password-Generator/
   
   ## Contributors
  
